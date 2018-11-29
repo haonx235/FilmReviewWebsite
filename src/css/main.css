@@ -1,10 +1,4 @@
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
+
 
 .col-md-golden-1 {
   -ms-flex: 0 0 61.803%;
@@ -20,6 +14,7 @@
   box-sizing: border-box;
   padding-left: 15px;
 }
+
 
 .blog-header {
     line-height: 1;
@@ -38,6 +33,29 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display", Arial, "Times New Roman", serif;
   }
+  
+  p {
+    font-family: "Lato", sans-serif;
+  }
+
+  .scrollToTop{
+    width:100px; 
+    height:130px;
+    padding:10px; 
+    text-align:center; 
+    background: whiteSmoke;
+    font-weight: bold;
+    color: #444;
+    text-decoration: none;
+    position:fixed;
+    top:75px;
+    right:40px;
+    display:none;
+    background: url('arrow_up.png') no-repeat 0px 20px;
+}
+.scrollToTop:hover{
+    text-decoration:none;
+}
   
   .display-4 {
     font-size: 2.5rem;
@@ -154,4 +172,5 @@
   .blog-footer p:last-child {
     margin-bottom: 0;
   }
+
 
