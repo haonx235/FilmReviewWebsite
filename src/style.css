@@ -6,6 +6,15 @@ html, body {
     color: #222;
 }
 
+.bgimg {
+    background-image: url('img/background.jpg');
+    background-size:cover
+}
+
+#my-jumbotron {
+    margin-bottom: 0
+}
+
 .navbar {
     padding: .8rem;
 }
@@ -18,9 +27,20 @@ html, body {
     font-size: 1.1em !important;
 }
 
-.carousel-inner img {
+/* Dropdown Animation */
+
+/*end dropdown */
+
+
+
+.carousel-inner#topRatedFilms img{
     width: 100%;
     height: 100%;
+}
+
+.carousel-inner#newFilms img {
+    width: 100%;
+    height: auto;
 }
 
 .carousel-caption {

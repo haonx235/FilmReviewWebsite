@@ -2,199 +2,483 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!---Bootstrap CSS-->
-    <link ref="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="fonts/Playfair-Display/playfair-display-v13-latin-regular.css" />
-    <link rel="stylesheet" type="text/css" href="fonts/Lato/lato-v14-latin-regular.css" />
-
     <title>Douban - Movies, TV and Celebrities</title>
-    <link rel="icon" href="img/video-camera.png">
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <link href="css/animate.min.css" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+
+    <link rel="icon" href="img/favicon.png">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> -->
+
 </head>
 
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-xl navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo2_2x_transparent.png" class="logo" alt="Douban"/>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="form-inline my-2 mx-lg-4">
-                    <input class="form-control mx-lg-0" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0 mx-lg-2" type="submit">Search</button>
-                </form>
-                <ul class="navbar-nav ml-auto my-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="user_review.html">User review</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Watchlist
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <div class="input-group justify-content-center mx-5" style="padding-left: 0">
+                    <input class="form-control py-2" type="search" placeholder="Find films, TV shows,...">
+                    <span class="input-group-append">
+                        <a href="search.html">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Comedy</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Romance</a>
-                        </div>
+                    </span>
+                </div>
+                <ul class="navbar-nav ml-5" style="white-space:nowrap">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#loginModal" data-toggle="modal" style="display: inline-block">Log in</a>
                     </li>
                 </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <div id="carouselExampleIndicators" class="carousel slide mt-2" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox" style=" width:100%; height: 590px">
+    <!--- Image Slider -->
+    <div id="slides" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#slides" data-slide-to="0" class="active"></li>
+            <li data-target="#slides" data-slide-to="1"></li>
+            <li data-target="#slides" data-slide-to="2"></li>
+            <li data-target="#slides" data-slide-to="3"></li>
+            <li data-target="#slides" data-slide-to="4"></li>
+        </ul>
+        <div class="carousel-inner" id="topRatedFilms">
+            <div class="carousel-inner" role="listbox" style=" width: 100vw; height: 56.25vw;">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/main_poster_1.jpg" alt="First slide">
+                    <img src="img/main_poster_1.jpg">
+                    <div class="carousel-caption">
+                        <!-- <h1 class="display-2">Bootstrap</h1>
+                        <h3>Complete Website Layout</h3>
+                        <button type="button" class="btn btn-outline-light btn-lg">View Demo</button>
+                        <button type="button" class="btn btn-primary btn-lg">Get Started</button> -->
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="img/main_poster_2.jpg" alt="Second slide">
+                    <img src="img/main_poster_2.jpg">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="img/main_poster_3.jpg" alt="Third slide">
+                    <img src="img/main_poster_3.jpg">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="img/main_poster_4.jpg" alt="Forth slide">
+                    <img src="img/main_poster_4.jpg">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="img/main_poster_5.jpg" alt="Fifth slide">
+                    <img src="img/main_poster_5.jpg">
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-
-        <!--Container-->
-        <main role="main" class="container my-3">
-            <div class="row">
-                <div class="col-md-golden-1 blog-main">
-                    <div class="blog-post bg-dark text-white">
-                        <h2 class="font-italic">New Films</h2>
-                        <iframe style="margin-top: 1em; display:block" width="560"
-                            height="315" src="https://www.youtube.com/embed/8bYBOVWLNIs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                            <p class="my-3" style="font-size: 20px">Fantastic Beasts: The Crimes of Grindelwald (2018)</p>
-
-                    </div>
-
-                    <nav class="blog-pagination">
-                        <a class="btn btn-outline-primary disabled" href="#">Older</a>
-                        <a class="btn btn-outline-secondary" href="#">Newer</a>
-                    </nav>
-
-                </div><!-- /.blog-main -->
-
-                <aside class="col-md-golden-2 blog-sidebar">
-                    <div class="p-3 mb-3 bg-light rounded">
-                        <h5 class="font-italic" style="line-height: 1.5">Fantastic Beasts: The Crimes of Grindelwald</h4>
-                            <ul>
-                                <li><a href="#">Opinion</a></li>
-                                <li><a href="#">Awards</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">User Reviews</a></li>
-                                <li><a href="#">User Ratings</a></li>
-                                <li><a href="#">External Reviews</a></li>
-                                <li><a href="#">Metacritics Reviews</a></li>
-                            </ul>
-                    </div>
-
-                    <div class="p-3 mb-3 bg-light rounded">
-                        <h4 class="font-italic">Film List</h4>
-                        <ol class="list-unstyled mb-0">
-                            <li>
-                                <div class="row mb-2">
-                                    <img class="card-img-right flex-auto d-none d-md-block" style="margin:0.3rem 1rem 0rem"
-                                        src="img/poster2.jpg" alt="Poster" width="120">
-                                    <div class="col-md-6">
-                                        <h6 style="margin: 0.5rem 0rem 0.5rem 0rem"><strong>The Grinch</strong></h6>
-                                        <p style="text-align: justify; font-size: 1rem">A grumpy Grinch plots to ruin
-                                            Christmas for the village of Whoville.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row mb-2">
-                                    <img class="card-img-right flex-auto d-none d-md-block" style="margin:0.3rem 1rem 0rem"
-                                        src="img/poster3.jpg" alt="Poster" width="120">
-                                    <div class="col-md-6">
-                                        <h6 style="margin: 0.5rem 0rem 0.5rem 0rem"><strong>Burn the Stage: The Movie</strong></h6>
-                                        <p style="text-align: justify; font-size: 1rem">A documentary following the
-                                            worldwide famous music group BTS.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="row mb-2">
-                                    <img class="card-img-right flex-auto d-none d-md-block" style="margin:0.3rem 1rem 0rem"
-                                        src="img/poster4.jpg" alt="Poster" width="120">
-                                    <div class="col-md-6">
-                                        <h6 style="margin: 0.5rem 0rem 0.5rem 0rem"><strong>Thach Thao</strong></h6>
-                                        <p style="text-align: justify; font-size: 1rem">A comedy romance film.</p>
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ol>
-                    </div>
-
-                    <div class="p-3 mb-3 bg-light rounded">
-                        <h4 class="font-italic">Find us on</h4>
-                        <ol class="list-unstyled">
-                            <li><a href="#">GitHub</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Facebook</a></li>
-                        </ol>
-                    </div>
-                </aside><!-- /.blog-sidebar -->
-
-            </div><!-- /.row -->
-
-        </main><!-- /.container -->
-
-        <footer class="blog-footer">
-            <p>Douban - Film for fun.</p>
-                            <div class="go-to-top">Back to top</div>
-        </footer>
+        <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
+
+    <!--- Jumbotron -->
+    <div class="container-fluid">
+        <div class="row jumbotron" id="my-jumbotron">
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+                <p class="lead">Find showtimes, watch trailers, browse photos, track your Watchlist and rate your
+                    favorite movies and TV shows on your phone or tablet!</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                <a href="#">
+                    <button type="button" class="btn btn-outline-secondary btn-lg">Find more</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--- Welcome Section -->
+    <div class="bgimg">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4">Opening This Week</h1>
+            </div>
+            <hr>
+            <!--Carousel Wrapper-->
+            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                <!--Controls-->
+                <div class="controls-top">
+                    <a class="btn-floating waves-effect waves-light" href="#multi-item-example" data-slide="prev"><i
+                            class="fa fa-chevron-left"></i></a>
+                    <a class="btn-floating waves-effect waves-light" href="#multi-item-example" data-slide="next"><i
+                            class="fa fa-chevron-right"></i></a>
+                </div>
+                <!--/.Controls-->
+
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                    <li data-target="#multi-item-example" data-slide-to="1"></li>
+                    <li data-target="#multi-item-example" data-slide-to="2"></li>
+                </ol>
+                <!--/.Indicators-->
+
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox" id="newFilms">
+
+                    <!--First slide-->
+                    <div class="carousel-item active">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card mb-2 h-100">
+                                    <img class="card-img-top" src="img/thumbnail_1.jpg" alt="Card image cap">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Rampant</h4>
+                                        <p class="card-text">Lee Chung is a Prince of Joseon, but he has been taken
+                                            hostage to the Qing Dynasty. He enjoys boozing, womanizing and gambling. He
+                                            is also an excellent swordsman.</p>
+                                        <a class="btn btn-primary mt-auto">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card mb-2 h-100">
+                                    <img class="card-img-top" src="img/thumbnail_2.jpg" alt="Card image cap">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Spider-Man: Into the Spider-Verse</h4>
+                                        <p class="card-text">Miles Morales becomes the Spider-Man of his reality and
+                                            crosses paths with his counterparts from other dimensions to stop a threat
+                                            to all reality.</p>
+                                        <a class="btn btn-primary mt-auto">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card mb-2 h-100">
+                                    <img class="card-img-top" src="img/thumbnail_3.jpg" alt="Card image cap">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Mortal Engines</h4>
+                                        <p class="card-text">A mysterious young woman named Hester Shaw joins forces
+                                            with Anna Fang, a dangerous outlaw with a bounty on her head, and Tom
+                                            Natsworthy, an outcast from London, to lead a rebellion against a giant
+                                            predator city on wheels.</p>
+                                        <a class="btn btn-primary mt-auto">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.First slide-->
+
+                    <!--Second slide-->
+                    <div class="carousel-item">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card mb-2 h-100">
+                                    <img class="card-img-top" src="img/thumbnail_4.jpg" alt="Card image cap">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Kung Fu League</h4>
+                                        <p class="card-text">Fei Ying Xiong, an indigent comic book artist, is
+                                            romantically interested in Bao'er, but the head manager of their company,
+                                            who also has a interest in Bao'er, prevents that from happening...</p>
+                                        <a class="btn btn-primary mt-auto">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card mb-2 h-100">
+                                    <img class="card-img-top" src="img/thumbnail_5.jpg" alt="Card image cap">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">The Grinch</h4>
+                                        <p class="card-text">A grumpy Grinch plots to ruin Christmas for the village of
+                                            Whoville.</p>
+                                        <a class="btn btn-primary mt-auto">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card mb-2 h-100">
+                                    <img class="card-img-top" src="img/thumbnail_6.jpg" alt="Card image cap">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Fantastic Beasts: The Crimes of Grindelwald</h4>
+                                        <p class="card-text">The second installment of the "Fantastic Beasts" series
+                                            featuring the adventures of Magizoologist Newt Scamander.</p>
+                                        <a class="btn btn-primary mt-auto">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Second slide-->
+
+                    <!--Third slide-->
+                    <div class="carousel-item">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card mb-2 h-100">
+                                    <img class="card-img-top" src="img/thumbnail_7.jpg" alt="Card image cap">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Burn the Stage: The Movie</h4>
+                                        <p class="card-text">A documentary following the worldwide famous music group
+                                            BTS, as they tour the world and share their experience along with their
+                                            beloved band friends and fans.</p>
+                                        <a class="btn btn-primary mt-auto">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card mb-2 h-100">
+                                    <img class="card-img-top" src="img/thumbnail_8.png" alt="Card image cap">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Pokémon the Movie: The Power of Us</h4>
+                                        <p class="card-text">Every year the citizens of Fura City celebrate a Wind
+                                            Festival. Where people live together with the wind...</p>
+                                        <a class="btn btn-primary mt-auto">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card mb-2 h-100">
+                                    <img class="card-img-top" src="img/thumbnail_9.jpg" alt="Card image cap">
+                                    <div class="card-body d-flex flex-column">
+                                        <h4 class="card-title">Thach Thao</h4>
+                                        <p class="card-text">A comedy romance film.</p>
+                                        <a class="btn btn-primary mt-auto">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Third slide-->
+
+                </div>
+                <!--/.Slides-->
+
+            </div>
+            <!--/.Carousel Wrapper-->
+        </div>
+    </div>
+
+    <!--- Three Column Section -->
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <img src="img/warner_bros.png" width="50%" height="30%"/>
+                <h3>HTML5</h3>
+                <p>Built with the latest version of HTML, HTML5.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <i class="fas fa-bold"></i>
+                <h3>Bootstrap</h3>
+                <p>Built with the latest version of Bootstrap, Bootstrap 4.</p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <i class="fas fa-css3"></i>
+                <h3>HTML5</h3>
+                <p>Built with the latest version of CSS, CSS3.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--- Fixed background -->
+    <figure>
+        <div class="fixed-wrap">
+            <div id="fixed"></div>
+        </div>
+    </figure>
+
+    <!--- Meet the team -->
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4">Meet the Team</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--- Cards -->
+    <div class="container-fluid padding">
+        <div class="row padding">
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/team1.png">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">John is an Internet entrepreneur with almost 20 years of experience.</p>
+                        <a href="#" class="btn btn-outline-secondary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/team2.png">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">Mary Jo</h4>
+                        <p class="card-text">Mary is a designer with almost 10 years of digital design experience.</p>
+                        <a href="#" class="btn btn-outline-secondary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="img/team3.png">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">Phil Ho</h4>
+                        <p class="card-text">Phil is a developer with over 5 years of web development experience.</p>
+                        <a href="#" class="btn btn-outline-secondary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--- Two Column Section -->
+    <div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-md-12 col-lg-6">
+                <h2>Our Philosophy</h2>
+                <p>We know that greatness in a disruptive era requires bold ambition, curious talent and a culture that
+                    believes we're smarter together.</p>
+                <p>We approach every challenge holistically, with best-in-class expertise in data, creativity, medi,
+                    technology, search, social and more. We call this Alchemy. It has the power to build out clients'
+                    brands and transform their business. And while it may seem like magic, we've got it down to a
+                    science.</p>
+
+            </div>
+            <div class="col-lg-6">
+                <img src="img/bootstrap2.png" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!--- Connect -->
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <div class="col-12">
+                <h2>Find us on</h2>
+            </div>
+            <div class="col-12 social padding">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://plus.google.com/" target="_blank"><i class="fab fa-google-plus-g"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!--- Footer -->
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="img/logo.png">
+                    <hr class="light">
+                    <p>555-555-5555</p>
+                    <p>email@myemail.com</p>
+                    <p>100 Street Name</p>
+                    <p>City, State, 00000</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Our hours</h5>
+                    <hr class="light">
+                    <p>Monday: 9am - 5pm</p>
+                    <p>Saturday: 10am - 4pm</p>
+                    <p>Sunday: closed</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Service Area</h5>
+                    <hr class="light">
+                    <p>San Francisco, CA</p>
+                    <p>New York City, NY</p>
+                    <p>Boston, MA</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light">
+                    <h5>&copy; Douban - Film for fun </h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal HTML -->
+    <div id="loginModal" class="modal fade">
+        <div class="modal-dialog modal-login">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="avatar">
+                        <img src="img/avatar.png" alt="Avatar">
+                    </div>
+                    <h4 class="modal-title">Log in</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.js"></script>
 </body>
 
 </html>
