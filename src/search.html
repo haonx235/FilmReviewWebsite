@@ -7,12 +7,10 @@
     <title>Douban - Movies, TV and Celebrities</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
-
-    <link href="style.css" rel="stylesheet">
-    <link href="login.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
     <link href="search_filter.css" rel="stylesheet">
 
     <link rel="icon" href="img/favicon.png">
@@ -22,7 +20,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> -->
-
 </head>
 
 <body>
@@ -31,22 +28,23 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="img/logo.png"></a>
+                <img src="img/logo.png" class="img-fluid">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <div class="input-group justify-content-center mx-5" style="padding-left: 0">
-                    <input class="form-control py-2" type="search" placeholder="Find films, TV shows,...">
-                    <span class="input-group-append">
+                <div class="input-group input-group-sm justify-content-center px-lg-5 pr-3 py-1">
+                    <input class="form-control" type="search" placeholder="Find films, TV shows,...">
+                    <div class="input-group-append">
                         <a href="search.html">
-                            <button class="btn btn-outline-secondary" type="button">
+                            <button class="btn btn-outline-secondary btn-sm" type="button">
                                 <i class="fa fa-search"></i>
                             </button>
                         </a>
-                    </span>
+                    </div>
                 </div>
-                <ul class="navbar-nav ml-5" style="white-space:nowrap">
+                <ul class="navbar-nav ml-2" style="white-space:nowrap">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home</a>
                     </li>
@@ -120,20 +118,106 @@
                 <div class="collapse mx-5 my-3" id="collapseExample">
                     <div id="filter-box">
                         <div class="col-md-4">
-                                <li><a href="#">Col 1 - Opt 1</a></li>
-                                <li><a href="#">Col 1 - Opt 2</a></li>
+                            <li><a href="#">Col 1 - Opt 1</a></li>
+                            <li><a href="#">Col 1 - Opt 2</a></li>
                         </div>
                         <div class="col-md-4">
-                                <li><a href="#">Col 2 - Opt 1</a></li>
-                                <li><a href="#">Col 2 - Opt 2</a></li>
+                            <li><a href="#">Col 2 - Opt 1</a></li>
+                            <li><a href="#">Col 2 - Opt 2</a></li>
                         </div>
                         <div class="col-md-4">
-                                <li><a href="#">Col 2 - Opt 1</a></li>
-                                <li><a href="#">Col 2 - Opt 2</a></li>
+                            <li><a href="#">Col 2 - Opt 1</a></li>
+                            <li><a href="#">Col 2 - Opt 2</a></li>
                         </div>
                     </div>
                 </div>
 
+                <!--DropDown Button-->
+                <div class="mx-5 my-3">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Genres
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">All</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Sci-fi</a>
+                            <a class="dropdown-item" href="#">Sports</a>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Horror</a>
+                            <a class="dropdown-item" href="#">Comedy</a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Point
+                        </button>
+                        <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">All</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">1 - 3</a>
+                                <a class="dropdown-item" href="#">3 - 5</a>
+                                <a class="dropdown-item" href="#">5 - 7</a>
+                                <a class="dropdown-item" href="#">7 - 10</a>
+                            </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Region
+                        </button>
+                        <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">All</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Asian films</a>
+                                <a class="dropdown-item" href="#">Western films</a>
+                                <a class="dropdown-item" href="#">Latin American films</a>
+                                <a class="dropdown-item" href="#">African films</a>
+                            </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Year
+                        </button>
+                        <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">All</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">1900 - 1945</a>
+                                <a class="dropdown-item" href="#">1945 - 1980</a>
+                                <a class="dropdown-item" href="#">1980 - 2000</a>
+                                <a class="dropdown-item" href="#">2000 - now</a>
+                            </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Action
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Action
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
@@ -222,10 +306,16 @@
         </div>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/all.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/popper.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/all.js"></script>
+    <script src="scripts/jquery-3.2.1.slim.min.js"></script>
+    <script>
+        $(".dropdown-menu a ").click(function () {
+            $(this).parents(".btn-group").find('.btn').text($(this).text());
+        });
+    </script>
 </body>
 
 </html>

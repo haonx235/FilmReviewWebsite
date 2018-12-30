@@ -7,9 +7,15 @@ html, body {
 }
 
 .bgimg {
-    background-image: url('img/background.jpg');
-    background-size:cover
+    background-image: url('../img/background.jpg');
+    background-size: cover
 }
+
+.lead {
+    font-size: 1.1rem;
+    font-weight: 300
+}
+
 
 #my-jumbotron {
     margin-bottom: 0
@@ -24,16 +30,55 @@ html, body {
 }
 
 .nav-link {
-    font-size: 1.1em !important;
+    font-size: 0.9em !important;
 }
 
 /* Dropdown Animation */
 
 /*end dropdown */
+.carousel-indicators .active {
+    width: 34px;
+    height: 20px;
+    background-color: transparent;
+}
+.carousel-indicators li {
+    border: 0;
+    margin: 0;
+    width: 34px;
+    height: 20px;
+    background-color: transparent;
+    position: relative;
+}
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    margin-left: -30%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+.carousel-indicators .active:before {
+    top: 0;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+}
+.carousel-indicators li:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.3);
+}
 
-
-
-.carousel-inner#topRatedFilms img{
+.carousel-inner#topRatedFilms img {
     width: 100%;
     height: 100%;
 }
@@ -62,6 +107,13 @@ html, body {
     padding-bottom: 1rem;
 }
 
+
+
+.card-text {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .btn-primary {
     color: white !important;
     background-color: #5493f7;
@@ -79,7 +131,7 @@ html, body {
     display: inline-block;
     text-align: center;
     color: #fff;
-    background: #4285f4;
+    background: #979797;
     box-sizing: border-box;
     border-radius: 50%;
     margin: 10px;
@@ -250,6 +302,8 @@ hr.light-100 {
 /*---Firefox Bug Fix --*/
 
 .carousel-item {
+    height: 100%;
+    overflow: auto;
     transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
@@ -276,7 +330,7 @@ figure {
 }
 
 #fixed {
-    background-image: url('img/mac.png');
+    background-image: url('../img/mac.png');
     position: fixed;
     display: block;
     top: 0;
