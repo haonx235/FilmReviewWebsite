@@ -3,67 +3,69 @@
  */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
-  
-  /*
+
+/*
    * Typography
    */
-  
-  h1 {
+
+h1 {
     margin-bottom: 20px;
     padding-bottom: 9px;
     border-bottom: 1px solid #eee;
-  }
-  
-  /*
+}
+
+
+/*
    * Sidebar
    */
-  
-  .sidebar {
-    position: auto;
+
+@media (max-width:768px) {
+    .hidden-sm-down {
+        display: none!important
+    }
+}
+
+.sidebar {
+    position: absolute;
     z-index: 1000;
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     border-right: 1px solid #eee;
   }
-  
-  /* Sidebar navigation */
-  .sidebar {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  
-  .sidebar .nav {
+
+.sidebar .nav {
     margin-bottom: 20px;
-  }
-  
-  .sidebar .nav-item {
+}
+
+.sidebar .nav-item {
     width: 100%;
-  }
-  
-  .sidebar .nav-item + .nav-item {
+}
+
+.sidebar .nav-item+.nav-item {
     margin-left: 0;
-  }
-  
-  .sidebar .nav-link {
+}
+
+.sidebar .nav-link {
     border-radius: 0;
-  }
-  
-  /*
+}
+
+/*
    * Dashboard
    */
-  
-   /* Placeholders */
-  .placeholders {
+
+/* Placeholders */
+
+.placeholders {
     padding-bottom: 3rem;
-  }
-  
-  .placeholder img {
+}
+
+.placeholder img {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
+}
 
-  #filter-box {
+#filter-box {
     border-radius: .25rem;
-    border: 1px solid rgba(0,0,0,.125);
-  }
+    border: 1px solid rgba(0, 0, 0, .125);
+}

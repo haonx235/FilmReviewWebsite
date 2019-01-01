@@ -1,0 +1,74 @@
+.banner-film > h1 {
+    font-family: SFProText, sans-serif;
+}
+
+.text.mr-2 {
+    font-family: SFProText, sans-serif;
+}
+
+@font-face {
+    font-family: SFProText;
+    src: url(../fonts/SFProText/SFProText-Light.eot);
+    src: url(../fonts/SFProText/SFProText-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/SFProText/SFProText-Light.woff2) format("woff2"), url(../fonts/SFProText/SFProText-Light.woff) format("woff"), url(../fonts/SFProText/SFProText-Light.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 100
+}
+
+@font-face {
+    font-family: SFProText;
+    src: url(../fonts/SFProText/SFProText-Medium.eot);
+    src: url(../fonts/SFProText/SFProText-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/SFProText/SFProText-Medium.woff2) format("woff2"), url(../fonts/SFProText/SFProText-Medium.woff) format("woff"), url(../fonts/SFProText/SFProText-Medium.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 600
+}
+
+@font-face {
+    font-family: SFProText;
+    src: url(../fonts/SFProText/SFProText-Bold.eot);
+    src: url(../fonts/SFProText/SFProText-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/SFProText/SFProText-Bold.woff2) format("woff2"), url(../fonts/SFProText/SFProText-Bold.woff) format("woff"), url(../fonts/SFProText/SFProText-Bold.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 700
+}
+
+@font-face {
+    font-family: SFProText;
+    src: url(../fonts/SFProText/SFProText-Regular.eot);
+    src: url(../fonts/SFProText/SFProText-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/SFProText/SFProText-Regular.woff2) format("woff2"), url(../fonts/SFProText/SFProText-Regular.woff) format("woff"), url(../fonts/SFProText/SFProText-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: pe7s;
+    src: url(../fonts/SFProText/pe7s-stroke.eot);
+    src: url(../fonts/SFProText/pe7s-stroke.woff) format("woff"), url(../fonts/SFProText/pe7s-stroke.ttf) format("truetype"), url(../fonts/SFProText/pe7s-stroke.svg?#pe7s) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+/* body, html {
+    width: 100%
+}
+
+body {
+    font-family: SFProText, sans-serif;
+    color: #252525;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: none;
+    text-rendering: auto;
+    line-height: 1.2;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-top: 100px;
+    background-color: #fff;
+    overflow-x: hidden
+} */
