@@ -317,6 +317,9 @@ hr.light-100 {
 }
 
 /*---Firefox Bug Fix --*/
+#slides .carousel-item {
+    height: calc(100vh - 86px);
+}
 
 .carousel-item {
     height: 100%;
