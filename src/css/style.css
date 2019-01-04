@@ -40,6 +40,18 @@ td.table-content {
     vertical-align: middle;
 }
 
+.notification .dropdown-toggle::after{
+    border: none;
+}
+
+.notification td.table-content{
+    min-width: 200px;
+}
+
+.badge{
+    vertical-align: super;
+}
+
 /* Dropdown Animation */
 
 /*end dropdown */
@@ -94,7 +106,7 @@ td.table-content {
 
 .carousel-inner#newFilms img {
     width: 100%;
-    height: auto;
+    height: 375px;
 }
 
 .carousel-caption {

@@ -19,4 +19,24 @@ $(document).ready(function () {
             $('#searchButton').click();//Trigger search button click event
         }
     });
+
+    // Check login
+    window.username = localStorage.getItem("username")
+    if (window.username) {
+        $('.only-show-not-login').hide()
+        $('.only-show-login .username').text(window.username)
+        $('.only-show-login .dropdown-item.logout').click(()=>{
+            localStorage.setItem("username", "")
+            location.reload();
+        })
+    } else {
+        $('.only-show-login').hide()
+    }
+
+    $('#loginModal').submit(e=>{
+        e.preventDefault()
+        let uname = $(e.target).find("input[name=username]")[0].value
+        localStorage.setItem("username", uname)
+        location.reload();
+    })
 });
