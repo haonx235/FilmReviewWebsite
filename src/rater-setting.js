@@ -31,6 +31,26 @@ function onload(event) {
             console.log(currentIndex, currentRating);
         }
     });
+
+    var starRating6 = raterJs({
+        starSize: 32,
+        max: 10,
+        element: document.querySelector("#rater6"),
+        rateCallback: function rateCallback(rating, done) {
+            this.setRating(rating);
+            done();
+        },
+        onHover: function (currentIndex, currentRating) {
+            document.querySelector('#live-rating').textContent = currentIndex + " / 10";
+        },
+        onLeave: function (currentIndex, currentRating) {
+            if (currentRating)
+                document.querySelector('#live-rating').textContent = currentRating + " / 10";
+            else
+                document.querySelector('#live-rating').textContent = "";
+            console.log(currentIndex, currentRating);
+        }
+    });
 }
 
 window.addEventListener("load", onload, false); 
