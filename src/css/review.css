@@ -79,7 +79,7 @@
 }
 
 .banner-film-social-share .btn-review {   
-    padding: .75em 2em;
+    padding: .75em 1em;
     margin-top: 20px;
     white-space: nowrap;
     outline: none;
@@ -88,7 +88,7 @@
     line-height: 1.5;
     font-family: SFProText, sans-serif;
     border: 1px solid #fff;
-    border-radius: 16px;
+    border-radius: 25px;
     background-color: transparent;
     letter-spacing: 1.5px;
     font-weight: 700;
