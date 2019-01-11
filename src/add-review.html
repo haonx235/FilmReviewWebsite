@@ -24,38 +24,10 @@
     <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="scripts/all.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
-    <script type="text/javascript" src="scripts/rater.js"></script>
     <script type="text/javascript" src="node_modules/rater-js/index.js"></script>
     <script type="text/javascript" src="rater-setting.js"></script>
 
     <link rel="icon" href="img/favicon.png">
-
-    <style>
-        .rate {
-            font-size: 35px;
-            font-family: sans-serif;
-        }
-        .rate-select-layer {
-            color: orange;
-        }
-        .rate-base-layer {
-            color: #aaa;
-        }
-        .rate-hover-layer {
-            color: orange;
-        }
-    </style>
-    <script>
-        hljs.initHighlightingOnLoad();
-        $(document).ready(function () {
-            var options1 = {
-                max_value: 10,
-                step_size: 1,
-                initial_value: 6,
-            }
-            $("#rate1").rate(options1);
-        });
-    </script>
 </head>
 
 <body>
@@ -206,8 +178,8 @@
                                                                         </a>
                                                                     </div>
                                                                     <div>
-                                                                        <a href="add-review.html" class="btn-review">
-                                                                            Review this title </a>
+                                                                        <a href="add-review.html" class="btn-review"
+                                                                            style="border: none"></a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -238,16 +210,12 @@
                 <div class="blog-main">
                     <div class="blog-post bg-light">
                         <h1 class="mb-4">Add review</h1>
-                        <h5 class="mb-2 mr-3">Your rating</h5>
+                        <h5 class="mb-2 mr-3 my-3 ml-1">Your rating</h5>
                         <div class="row mx-0">
-                            <div id="rate1" class="rate" data-rate-value="6"></div>
-                            <h6 class="row row-rating pl-3 my-3 mx-3" id="rate-point">6 / 10</h6>
-                        </div>
-                        <div>
                             <span id="rater5"></span>
-                            <span class="live-rating"></span>
+                            <span class="row-rating ml-3" id="live-rating"></span>
                         </div>
-                        <div class="row row-rating my-2" style="padding-left: 1rem">
+                        <div class="my-3 ml-1">
                             <h5 class="my-0 mr-3">Your review</h5>
                         </div>
                         <div class="form-group">
@@ -258,16 +226,12 @@
                                 placeholder="Write your review here"></textarea>
                         </div>
                         <div class="row mb-2">
-                            <img class="card-img-right flex-auto d-none d-md-block" style="margin:0.3rem 1rem 0rem" src="img/star.svg"
-                                alt="Star" width="30">
-                            <p style="margin: 0.5rem 0rem 0rem 0rem"><strong>6</strong>/10</p>
+                            <div>
+                                <a href="aquaman.html" class="btn-submit">Submit</a>
+                            </div>
                         </div>
 
                     </div>
-                    <nav class="blog-pagination">
-                        <a class="btn btn-outline-primary disabled" href="#">Older</a>
-                        <a class="btn btn-outline-secondary" href="#">Newer</a>
-                    </nav>
                 </div>
             </main>
         </div>

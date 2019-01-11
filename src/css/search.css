@@ -1,28 +1,50 @@
-/*
- * Base structure
- */
-
-/* Move down content because we have a fixed navbar that is 50px tall */
-
-/*
-   * Typography
-   */
-
 h1 {
     margin-bottom: 20px;
     padding-bottom: 9px;
     border-bottom: 1px solid #eee;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
 
-/*
-   * Sidebar
-   */
+p {
+    color: white;
+}
+
+button {
+    color: white;
+}
+
+span {
+    color: white;
+}
+
+p.caption {
+    color: black;
+    margin: 3px 0px;
+    font-size: 12px
+}
+
+
+#filter-box {
+    border-radius: .25rem;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
 
 @media (max-width:768px) {
     .hidden-sm-down {
         display: none!important
     }
+}
+
+.placeholders {
+    padding-bottom: 3rem;
+}
+
+.placeholder img {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .sidebar {
@@ -48,24 +70,4 @@ h1 {
 
 .sidebar .nav-link {
     border-radius: 0;
-}
-
-/*
-   * Dashboard
-   */
-
-/* Placeholders */
-
-.placeholders {
-    padding-bottom: 3rem;
-}
-
-.placeholder img {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-}
-
-#filter-box {
-    border-radius: .25rem;
-    border: 1px solid rgba(0, 0, 0, .125);
 }

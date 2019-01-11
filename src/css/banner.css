@@ -77,13 +77,13 @@
 .banner-film {
     max-width: 300px;
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     color: #fff
 }
 
 @media (max-width:991.99px) {
     .banner-film {
-        font-size: 12px
+        max-width: 100%;
     }
 }
 
@@ -110,7 +110,7 @@
 }
 
 .banner-film-title {
-    font-size: 25px;
+    font-size: 35px;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -124,7 +124,7 @@
 
 @media (max-width:991.99px) {
     .banner-film-title {
-        font-size: 18px
+        font-size: 30px
     }
 }
 
@@ -132,7 +132,7 @@
     letter-spacing: 1.5px;
     font-weight: 700;
     line-height: 1.5;
-    padding: .5em 0
+    padding: .5em 0;
 }
 
 .banner-film-info>span {
@@ -143,7 +143,7 @@
     font-weight: 400;
     line-height: 1.25;
     text-align: justify;
-    max-height: 6.25em;
+    max-height: 15em;
     overflow: hidden;
     margin-bottom: 1em
 }
@@ -179,7 +179,7 @@
     display: table;
     width: 100%;
     border-spacing: 0 5px;
-    font-size: 14px
+    font-size: 15px
 }
 
 .banner-film-genre-item {
@@ -191,17 +191,19 @@
 }
 
 .banner-film-genre-heading {
-    color: #a1a1a1;
     width: 1%;
     padding-right: 1em;
     white-space: nowrap
 }
 
+.banner-film-genre-text a {
+    color: white;
+}
+
 .banner-film-social-share {
-    color: #a1a1a1;
     margin-top: 2em;
     margin-bottom: 2em;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.6;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -212,9 +214,10 @@
     letter-spacing: .8px
 }
 
-@media (max-width:991.99px) {
+@media (max-width: 1400px) {
     .banner-film-social-share {
-        margin: .5em
+        margin-top: 0.5em;
+        margin-bottom: 1em;
     }
 }
 
@@ -349,14 +352,16 @@
         display: none
     }
     .banner-film-description {
-        max-height: 2.5em;
-        overflow-y: scroll
+        max-height: 100px;
     }
     .banner-film-social-share {
         margin-top: 0
     }
     .banner-film-info {
         padding: 2px
+    }
+    .banner-box-content {
+        margin-top: -20px;
     }
 }
 
@@ -401,4 +406,28 @@
 
 .banner-film-info .star img, .banner-film-social-share .btn-favourite img {
     display: inline!important
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .banner-box-content {
+        margin-bottom: 0px
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.99px) {
+    .banner-box-content {
+        margin-bottom: -20px
+    }
+    .banner-film-description {
+        margin-bottom: 0em;
+        line-height: 1.2;
+    }
+    .banner-film-title {
+        font-size: 30px;
+        padding: 0px;
+    }
+    .banner-film-social-share {
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+    }
 }

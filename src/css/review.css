@@ -78,7 +78,7 @@
     border-radius: 2rem;
 }
 
-.btn-review {   
+.banner-film-social-share .btn-review {   
     padding: .75em 2em;
     margin-top: 20px;
     white-space: nowrap;
@@ -87,14 +87,13 @@
     color: #fff;
     line-height: 1.5;
     font-family: SFProText, sans-serif;
-    font-size: 18px;
     border: 1px solid #fff;
     border-radius: 16px;
     background-color: transparent;
     letter-spacing: 1.5px;
     font-weight: 700;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: .8px;
     width: 100%;
 }
@@ -103,6 +102,41 @@
     background-color: #fff;
     color: #252525;
     border-color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 1400px) {
+    .banner-film-social-share .btn-review {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+.btn-submit {   
+    padding: .75em 2em;
+    margin: 20px;
+    white-space: nowrap;
+    outline: none;
+    transition: none;
+    color: rgb(255, 255, 255);
+    line-height: 3;
+    font-family: SFProText, sans-serif;
+    font-size: 15px;
+    border: 1px solid rgb(31, 31, 31);
+    border-radius: 16px;
+    background-color: rgb(66, 66, 66);
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: .8px;
+    width: 100%;
+}
+
+.btn-submit:active, .btn-submit:active:focus, .btn-submit:focus, .btn-submit:hover {
+    background-color: rgb(0, 0, 0);
+    color: #e0e0e0;
+    border-color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 
 .card-img-right {
@@ -197,10 +231,9 @@ p {
     font-family: "Lato", sans-serif;
 }
 
-.row.row-rating {
+.row-rating {
     display: flex;
     align-items: center;
-    vertical-align: middle
 }
 
 .scrollToTop {

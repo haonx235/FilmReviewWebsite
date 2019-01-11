@@ -1,20 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="15px" height="14px" viewBox="0 0 15 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>Group@2x</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <linearGradient x1="72.5379183%" y1="14.1277032%" x2="30.084926%" y2="90.2898554%" id="linearGradient-1">
-            <stop stop-color="#FFD517" offset="0%"></stop>
-            <stop stop-color="#FFA406" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group" fill-rule="nonzero">
-            <g id="star-half">
-                <polygon id="Star-Copy-3" fill="url(#linearGradient-1)" points="7.44500017 11.5495121 2.84373702 13.9288423 3.72250009 8.88933987 0 5.32034437 5.14436859 4.58509087 7.44500017 0 9.74563175 4.58509087 14.8900003 5.32034437 11.1675002 8.88933987 12.0462633 13.9288423"></polygon>
-                <path d="M7.44500017,0 L9.74563175,4.58509087 L14.8900003,5.32034437 L11.1675002,8.88933987 L12.0462633,13.9288423 L7.44500017,11.5495121 L7.44500017,0 Z" id="Combined-Shape" fill="#B3B3B3"></path>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="21px" height="19.8px" viewBox="0 0 21 19.8" style="enable-background:new 0 0 21 19.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#Star-Copy-3_1_);}
+	.st1{fill:#B3B3B3;}
+</style>
+<title>Group@2x</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Group">
+		<g id="star-half">
+			
+				<linearGradient id="Star-Copy-3_1_" gradientUnits="userSpaceOnUse" x1="-35.3707" y1="57.8847" x2="-35.9727" y2="56.8047" gradientTransform="matrix(14.89 0 0 -13.9288 541.71 808.9426)">
+				<stop  offset="0" style="stop-color:#FFD517"/>
+				<stop  offset="1" style="stop-color:#FFA406"/>
+			</linearGradient>
+			<polygon id="Star-Copy-3" class="st0" points="10.5,16.4 4,19.8 5.3,12.6 0,7.6 7.3,6.5 10.5,0 13.7,6.5 21,7.6 15.8,12.6 
+				17,19.8 			"/>
+			<path id="Combined-Shape" class="st1" d="M10.5,0l3.2,6.5l7.3,1l-5.3,5.1l1.2,7.2l-6.5-3.4V0z"/>
+		</g>
+	</g>
+</g>
 </svg>
