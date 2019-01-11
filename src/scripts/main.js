@@ -25,7 +25,7 @@ $(document).ready(function () {
     if (window.username) {
         $('.only-show-not-login').hide()
         $('.only-show-login .username').text(window.username)
-        $('.only-show-login .dropdown-item.logout').click(()=>{
+        $('.only-show-login .dropdown-item.logout').click(() => {
             localStorage.setItem("username", "")
             location.reload();
         })
@@ -33,10 +33,15 @@ $(document).ready(function () {
         $('.only-show-login').hide()
     }
 
-    $('#loginModal').submit(e=>{
+    $('#loginModal').submit(e => {
         e.preventDefault()
         let uname = $(e.target).find("input[name=username]")[0].value
         localStorage.setItem("username", uname)
         location.reload();
     })
+
+    // Rating changed
+    $(".rate").on("change", function (ev, data) {
+        $('#rate-point').text(data.to + " / 10");
+    });
 });

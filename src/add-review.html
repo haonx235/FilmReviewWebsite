@@ -18,7 +18,44 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" type="text/css" href="css/banner.css" />
 
+    <script type="text/javascript" src="scripts/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="scripts/highlight.min.js"></script>
+    <script type="text/javascript" src="scripts/popper.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/all.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/rater.js"></script>
+    <script type="text/javascript" src="node_modules/rater-js/index.js"></script>
+    <script type="text/javascript" src="rater-setting.js"></script>
+
     <link rel="icon" href="img/favicon.png">
+
+    <style>
+        .rate {
+            font-size: 35px;
+            font-family: sans-serif;
+        }
+        .rate-select-layer {
+            color: orange;
+        }
+        .rate-base-layer {
+            color: #aaa;
+        }
+        .rate-hover-layer {
+            color: orange;
+        }
+    </style>
+    <script>
+        hljs.initHighlightingOnLoad();
+        $(document).ready(function () {
+            var options1 = {
+                max_value: 10,
+                step_size: 1,
+                initial_value: 6,
+            }
+            $("#rate1").rate(options1);
+        });
+    </script>
 </head>
 
 <body>
@@ -157,17 +194,20 @@
                                                                         <span class="text mr-2">share</span>
                                                                         <a onclick="window.open('http://www.facebook.com/sharer.php?u=https://latestfilmreviews.azurewebsites.net/', 'Facebook', 'width=600,height=400')"
                                                                             class="btn-social-share" tabindex="0">
-                                                                            <img src="img/facebook.svg" alt="Facebook"> </a>
+                                                                            <img src="img/facebook.svg" alt="Facebook">
+                                                                        </a>
                                                                         <a onclick="window.open('http://twitter.com/share?url=https://latestfilmreviews.azurewebsites.net/&amp;via=latestfilmreviews', 'twitter', 'width=600,height=400')"
                                                                             class="btn-social-share" tabindex="0">
-                                                                            <img src="img/twitter.svg" alt="Twitter"> </a>
+                                                                            <img src="img/twitter.svg" alt="Twitter">
+                                                                        </a>
                                                                         <a onclick="window.open(' https://plusone.google.com/_/+1/confirm?hl=en&amp;url=https://latestfilmreviews.azurewebsites.net/', 'google plus', 'width=600,height=400')"
                                                                             class="btn-social-share" tabindex="0">
                                                                             <img src="img/google-plus.svg" alt="Google Plus">
                                                                         </a>
                                                                     </div>
                                                                     <div>
-                                                                        <a href="add-review.html" class="btn-review"> Review this title </a>
+                                                                        <a href="add-review.html" class="btn-review">
+                                                                            Review this title </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -191,143 +231,46 @@
         <!--Container-->
         <div>
             <main role="main" class="container">
-                <div class="row">
-                    <div class="col-md-golden-1 blog-main">
-                        <div class="blog-post bg-light">
-                            <div class="row mb-2">
-                                <img class="card-img-right flex-auto d-none d-md-block" style="margin:0.3rem 1rem 0rem"
-                                    src="img/star.svg" alt="Star" width="30">
-                                <p style="margin: 0.5rem 0rem 0rem 0rem"><strong>6</strong>/10</p>
-                            </div>
-                            <h2 class="blog-post-title">Stunning movie, but where was the plot..?</h2>
-                            <p class="blog-post-meta"><a href="#">Tom0610</a> 14 November 2018</p>
-
-                            <p>Let me start off by saying that I am a big Harry Potter fan; I loved all 8 HP movies,
-                                and
-                                really liked
-                                the 1st installment of Newt's adventures as well.
-                            </p>
-                            <p>This movie just didn't really do the trick for me.
-                                There was absolutely nothing to complain about visually; the movie was even more
-                                stunning
-                                than the first one,
-                                with even more beautifully designed 'Beasts'. </p>
-                            <p>And as many other people have mentioned, as a Harry Potter fan,
-                                you just can't hate this movie. Where Fantastic Beasts and Where to Find Them only
-                                contained a handful amount
-                                of references to the Harry Potter series, The Crimes of Grindelwald has tonnes. Enough
-                                to
-                                hype up any
-                                Harry Potter fan.</p>
+            </main>
+        </div>
+        <div>
+            <main role="main" class="container">
+                <div class="blog-main">
+                    <div class="blog-post bg-light">
+                        <h1 class="mb-4">Add review</h1>
+                        <h5 class="mb-2 mr-3">Your rating</h5>
+                        <div class="row mx-0">
+                            <div id="rate1" class="rate" data-rate-value="6"></div>
+                            <h6 class="row row-rating pl-3 my-3 mx-3" id="rate-point">6 / 10</h6>
+                        </div>
+                        <div>
+                            <span id="rater5"></span>
+                            <span class="live-rating"></span>
+                        </div>
+                        <div class="row row-rating my-2" style="padding-left: 1rem">
+                            <h5 class="my-0 mr-3">Your review</h5>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control input-sm my-4" id="inputsm" type="text" placeholder="Write a headline for your review here">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control input-sm my-3" style="height:500px" id="inputsm" type="text"
+                                placeholder="Write your review here"></textarea>
+                        </div>
+                        <div class="row mb-2">
+                            <img class="card-img-right flex-auto d-none d-md-block" style="margin:0.3rem 1rem 0rem" src="img/star.svg"
+                                alt="Star" width="30">
+                            <p style="margin: 0.5rem 0rem 0rem 0rem"><strong>6</strong>/10</p>
                         </div>
 
-                        <div class="blog-post bg-light">
-                            <div class="row mb-2">
-                                <img class="card-img-right flex-auto d-none d-md-block" style="margin:0.3rem 1rem 0rem"
-                                    src="img/star.svg" alt="Poster" width="30">
-                                <p style="margin: 0.5rem 0rem 0rem 0rem"><strong>9</strong>/10</p>
-                            </div>
-                            <h2 class="blog-post-title">A fantastic thrill ride through the magical wizarding world
-                                laid by
-                                J.K.Rowling.</h2>
-                            <p class="blog-post-meta"><a href="#">brat_of_eee</a> 8 November 2018</p>
-
-                            <p>Let me start off by saying that I am a big Harry Potter fan; I loved all 8 HP movies,
-                                and
-                                really liked
-                                the 1st installment of Newt's adventures as well.
-                            </p>
-                            <p>This movie just didn't really do the trick for me.
-                                There was absolutely nothing to complain about visually; the movie was even more
-                                stunning
-                                than the first one,
-                                with even more beautifully designed 'Beasts'. </p>
-                            <p>And as many other people have mentioned, as a Harry Potter fan,
-                                you just can't hate this movie. Where Fantastic Beasts and Where to Find Them only
-                                contained a handful amount
-                                of references to the Harry Potter series, The Crimes of Grindelwald has tonnes. Enough
-                                to
-                                hype up any
-                                Harry Potter fan.</p>
-                        </div>
-
-                        <nav class="blog-pagination">
-                            <a class="btn btn-outline-primary disabled" href="#">Older</a>
-                            <a class="btn btn-outline-secondary" href="#">Newer</a>
-                        </nav>
-
-                    </div><!-- /.blog-main -->
-
-                    <aside class="col-md-golden-2 blog-sidebar">
-                        <div class="p-3 mb-3 bg-light rounded">
-                            <h5 class="font-italic" style="line-height: 1.5">Fantastic Beasts: The Crimes of
-                                Grindelwald</h4>
-                                <ul>
-                                    <li><a href="#">Opinion</a></li>
-                                    <li><a href="#">Awards</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                    <li><a href="#">User Reviews</a></li>
-                                    <li><a href="#">User Ratings</a></li>
-                                    <li><a href="#">External Reviews</a></li>
-                                    <li><a href="#">Metacritics Reviews</a></li>
-                                </ul>
-                        </div>
-
-                        <div class="p-3 mb-3 bg-light rounded">
-                            <h4 class="font-italic">Film List</h4>
-                            <ol class="list-unstyled mb-0">
-                                <li>
-                                    <div class="row mb-2">
-                                        <img class="card-img-right flex-auto d-none d-md-block" style="margin:0.3rem 1rem 0rem"
-                                            src="img/thumbnail_3.jpg" alt="Poster" width="120">
-                                        <div class="col-md-6">
-                                            <h6 style="margin: 0.5rem 0rem 0.5rem 0rem"><strong>The Grinch</strong></h6>
-                                            <p style="text-align: justify; font-size: 1rem">A grumpy Grinch plots to
-                                                ruin
-                                                Christmas for the village of Whoville.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="row mb-2">
-                                        <img class="card-img-right flex-auto d-none d-md-block" style="margin:0.3rem 1rem 0rem"
-                                            src="img/thumbnail_4.jpg" alt="Poster" width="120">
-                                        <div class="col-md-6">
-                                            <h6 style="margin: 0.5rem 0rem 0.5rem 0rem"><strong>Burn the Stage: The
-                                                    Movie</strong></h6>
-                                            <p style="text-align: justify; font-size: 1rem">A documentary following the
-                                                worldwide famous music group BTS.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="row mb-2">
-                                        <img class="card-img-right flex-auto d-none d-md-block" style="margin:0.3rem 1rem 0rem"
-                                            src="img/thumbnail_6.jpg" alt="Poster" width="120">
-                                        <div class="col-md-6">
-                                            <h6 style="margin: 0.5rem 0rem 0.5rem 0rem"><strong>Thach Thao</strong></h6>
-                                            <p style="text-align: justify; font-size: 1rem">A comedy romance film.</p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                            </ol>
-                        </div>
-
-                        <div class="p-3 mb-3 bg-light rounded">
-                            <h4 class="font-italic">Find us on</h4>
-                            <ol class="list-unstyled">
-                                <li><a href="#">GitHub</a></li>
-                                <li><a href="#">Twitter</a></li>
-                                <li><a href="#">Facebook</a></li>
-                            </ol>
-                        </div>
-                    </aside>
-
+                    </div>
+                    <nav class="blog-pagination">
+                        <a class="btn btn-outline-primary disabled" href="#">Older</a>
+                        <a class="btn btn-outline-secondary" href="#">Newer</a>
+                    </nav>
                 </div>
             </main>
         </div>
-
 
 
         <!--- Connect -->
@@ -415,11 +358,6 @@
         </div>
 
     </div>
-    <script src="scripts/jquery.min.js"></script>
-    <script src="scripts/popper.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/all.js"></script>
-    <script src="scripts/main.js"></script>
 </body>
 
 </html>
