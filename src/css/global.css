@@ -326,6 +326,10 @@ td.table-content {
     padding-bottom: 2rem;
 }
 
+.footer-style .col-md-4 p {
+    font-family: 'Poppins', sans-serif;
+}
+
 .welcome {
     width: 75%;
     margin: 0 auto;

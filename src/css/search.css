@@ -12,6 +12,10 @@ p {
     color: white;
 }
 
+.footer-style h5, p {
+    color: #d5d5d5
+}
+
 button {
     color: white;
 }
